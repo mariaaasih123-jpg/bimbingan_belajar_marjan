@@ -1,15 +1,15 @@
-import 'package:bimbingan_belajar_marjan/pages/auth/register_pengajar_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/register_owner_maria.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginPengajarMaria extends StatefulWidget {
-  const LoginPengajarMaria({super.key});
+class LoginOwnerMaria extends StatefulWidget {
+  const LoginOwnerMaria({super.key});
 
   @override
-  State<LoginPengajarMaria> createState() => _LoginPengajarMariaState();
+  State<LoginOwnerMaria> createState() => _LoginOwnerMariaState();
 }
 
-class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
+class _LoginOwnerMariaState extends State<LoginOwnerMaria> {
   TextEditingController _username = TextEditingController();
   TextEditingController _password = TextEditingController();
   bool _isSecure = true;
@@ -79,7 +79,7 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                   child: Image.asset('assets/image/pengajar.webp', height: 150),
                 ),
                 Text(
-                  " Login guru/pengajar",
+                  " Login Owner ",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -99,7 +99,7 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    prefix: Icon(Icons.person, color: Colors.pinkAccent),
+                    prefix: Icon(Icons.person, color: Colors.white),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -115,7 +115,7 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    prefix: Icon(Icons.shield, color: Colors.pink),
+                    prefix: Icon(Icons.shield, color: Colors.white),
                     suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
                   ),
                 ),
@@ -136,7 +136,7 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                 ElevatedButton(
                   style: ButtonStyle(
                     fixedSize: WidgetStatePropertyAll(Size(200, 1)),
-                    backgroundColor: WidgetStatePropertyAll(Colors.redAccent),
+                    backgroundColor: WidgetStatePropertyAll(Colors.black),
                   ),
                   onPressed: () {
                     setState(() {
@@ -170,7 +170,7 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RegisterPengajarMaria(),
+                          builder: (context) => RegisterOwnerMaria(),
                         ),
                       ),
                       child: Text(
