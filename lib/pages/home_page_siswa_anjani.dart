@@ -4,8 +4,6 @@ import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../model/jadwal_model.dart';
-import '../services/jadwal_service.dart';
 import 'auth/login_siswa_anjani.dart';
 import 'daftar_pengajar.dart';
 import 'jadwal_page.dart';
@@ -18,11 +16,10 @@ class HomePageSiswa extends StatefulWidget {
 }
 
 class _HomePageSiswaState extends State<HomePageSiswa> {
-  List<JadwalModel> jadwal = JadwalService().jadwal();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.purpleAccent,
         title: Column(
@@ -67,7 +64,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.home_outlined, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Home", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Home",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -83,7 +83,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.calendar_month, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Jadwal", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Jadwal",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -99,7 +102,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.people_alt, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Daftar Pengajar", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Daftar Pengajar",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -115,7 +121,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(CupertinoIcons.plus, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Tambah Jadwal", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Tambah Jadwal",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -131,7 +140,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.person, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Profile", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Profile",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -147,7 +159,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.settings, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Pengaturan", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Pengaturan",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -159,78 +174,55 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                     MaterialPageRoute(builder: (context) => LoginSiswa()),
                   );
                 },
-                child:
-                Row(
+                child: Row(
                   children: [
                     Icon(Icons.logout, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Log out", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Log out",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
-
             ],
           ),
         ),
       ),
-      body: ListView.builder(
-        itemCount: jadwal.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              margin: EdgeInsets.only(top: 20, left: 15, right: 15),
-              padding: EdgeInsets.all(15),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10, left: 15, right: 15),
+              height: 75,
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.purple.shade100,
                 borderRadius: BorderRadius.circular(5),
                 border: Border.all(color: Colors.grey),
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    jadwal[index].jam,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    "14 : 55 - "
+                    "15 :00 ",
                   ),
-                  SizedBox(width: 12),
-                  Icon(jadwal[index].icon, size: 30, color: Colors.purple),
-                  SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        jadwal[index].pelajaran,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 3),
-                      Text(
-                        jadwal[index].guru,
-                        style: TextStyle(fontSize: 13, color: Colors.grey),
-                      ),
-                    ],
+                  SizedBox(height: 10, width: 10),
+                  Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
+                  SizedBox(height: 10, width: 10),
+                  Text(
+                    "MATEMATIKA",
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(width: 12),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.purple),
-                      color: Colors.purple.shade50,
-                    ),
-                    child: Text(
-                      jadwal[index].status,
-                      style: TextStyle(fontSize: 12),
-                    ),
-                  ),
+                  Text("Bu rina", style: TextStyle(fontSize: 10)),
                 ],
+
               ),
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }

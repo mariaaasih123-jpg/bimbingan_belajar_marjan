@@ -11,8 +11,8 @@ class RegisterSiswaAnjani extends StatefulWidget {
 }
 
 class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
-  TextEditingController _nama = TextEditingController();
-  TextEditingController _password = TextEditingController();
+  var _nama = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   final TextEditingController _confirmpassword = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
