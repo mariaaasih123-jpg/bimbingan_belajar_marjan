@@ -33,7 +33,7 @@ class _DasbroadPageState extends State<DasbroadPage> {
       label: "PEMBAYARAN",
       color: Colors.black,
     ),
-    0: DasbroadModel(
+    3: DasbroadModel(
       page: SettingPage(),
       icon: Icons.settings,
       label: "PENGATURAN",
