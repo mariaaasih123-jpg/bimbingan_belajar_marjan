@@ -34,7 +34,7 @@ class _RegisterOwnerMariaState extends State<RegisterOwnerMaria> {
       body: SingleChildScrollView(
         child: Container(
           width: size.width,
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.purple.withValues(alpha: 0.5),
             borderRadius: BorderRadius.circular(20),

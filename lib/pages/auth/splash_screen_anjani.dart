@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import '../select_page.dart';
+import '../select_page_maria.dart';
 
 
 class SplashScreen extends StatefulWidget {

@@ -39,7 +39,7 @@ class _RegisterPengajarMariaState extends State<RegisterPengajarMaria> {
             boxShadow: [
               BoxShadow(
                 offset: Offset(1.5, 1.5),
-                color: Colors.purple.withOpacity(0.4),
+                color: Colors.purple.withValues(alpha: 0.5),
                 blurRadius: 5,
                 spreadRadius: 5,
               ),

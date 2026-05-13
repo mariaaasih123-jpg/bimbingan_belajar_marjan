@@ -13,6 +13,7 @@ class RegisterSiswaAnjani extends StatefulWidget {
 class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
   TextEditingController _nama = TextEditingController();
   TextEditingController _password = TextEditingController();
+
   final TextEditingController _confirmpassword = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
@@ -56,7 +57,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.pink.shade50.withValues(alpha: 0.7),
+                  fillColor: Colors.purple.withValues(alpha: 0.7),
                   label: Text("NAMA"),
                   hintText: "Nama",
                   border: OutlineInputBorder(
@@ -71,7 +72,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                 obscureText: _isSecure,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.pink.shade50.withValues(alpha: 0.5),
+                  fillColor: Colors.purple.withValues(alpha: 0.5),
                   hintText: "Password",
                   labelText: "Password",
                   border: OutlineInputBorder(

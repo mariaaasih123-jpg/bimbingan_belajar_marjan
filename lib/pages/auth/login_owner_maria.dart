@@ -14,8 +14,6 @@ class _LoginOwnerMariaState extends State<LoginOwnerMaria> {
   TextEditingController _password = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
-  bool _rememberMe = true;
-  final TextEditingController _confirmpassword = TextEditingController();
 
   void isSecure() {
     setState(() {
@@ -120,19 +118,6 @@ class _LoginOwnerMariaState extends State<LoginOwnerMaria> {
                   ),
                 ),
                 SizedBox(height: 20),
-                Row(
-                  children: [
-                    Checkbox(
-                      value: _rememberMe,
-                      onChanged: (value) {
-                        setState(() {
-                          _rememberMe = !_rememberMe;
-                        });
-                      },
-                    ),
-                    Text("Remember Me", style: TextStyle(color: Colors.white)),
-                  ],
-                ),
                 ElevatedButton(
                   style: ButtonStyle(
                     fixedSize: WidgetStatePropertyAll(Size(200, 1)),
@@ -140,7 +125,7 @@ class _LoginOwnerMariaState extends State<LoginOwnerMaria> {
                   ),
                   onPressed: () {
                     setState(() {
-                      if (_username.text == "Mariasih" &&
+                      if (_username.text == "Marjan" &&
                           _password.text == "88888") {
                         showDialog(
                           context: context,
