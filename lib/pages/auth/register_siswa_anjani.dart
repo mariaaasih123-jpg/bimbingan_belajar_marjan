@@ -12,7 +12,7 @@ class RegisterSiswaAnjani extends StatefulWidget {
 
 class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
   final TextEditingController _nama = TextEditingController();
-  TextEditingController _password = TextEditingController();
+   final TextEditingController _password = TextEditingController();
 
   final TextEditingController _confirmpassword = TextEditingController();
   bool _isSecure = true;
@@ -37,7 +37,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
             children: [
