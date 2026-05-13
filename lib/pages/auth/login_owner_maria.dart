@@ -10,8 +10,8 @@ class LoginOwnerMaria extends StatefulWidget {
 }
 
 class _LoginOwnerMariaState extends State<LoginOwnerMaria> {
-  TextEditingController _username = TextEditingController();
-  TextEditingController _password = TextEditingController();
+   final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
 

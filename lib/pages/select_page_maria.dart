@@ -1,14 +1,16 @@
+import 'package:bimbingan_belajar_marjan/pages/auth/login_pengajar_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
 import 'package:flutter/material.dart';
 
-class SelectPage extends StatefulWidget {
-  const SelectPage({super.key});
+
+class SelectPageMaria extends StatefulWidget {
+  const SelectPageMaria({super.key});
 
   @override
-  State<SelectPage> createState() => _SelectPageState();
+  State<SelectPageMaria> createState() => _SelectPageMariaState();
 }
 
-class _SelectPageState extends State<SelectPage> {
+class _SelectPageMariaState extends State<SelectPageMaria> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +65,11 @@ class _SelectPageState extends State<SelectPage> {
                             ),
                           );
                         },
-                        icon: Icon(Icons.school,size:45,color: Colors.blueGrey,),
+                        icon: Icon(
+                          Icons.school,
+                          size: 45,
+                          color: Colors.blueGrey,
+                        ),
                       ),
                       Text(
                         " SISWA",
@@ -93,7 +99,17 @@ class _SelectPageState extends State<SelectPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.person, size: 60, color: Colors.green),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPengajarMaria(),
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.person, size: 50, color: Colors.blue),
+                      ),
                       SizedBox(height: 10),
                       Text(
                         "GURU",

@@ -12,9 +12,9 @@ class RegisterOwnerMaria extends StatefulWidget {
 }
 
 class _RegisterOwnerMariaState extends State<RegisterOwnerMaria> {
-  TextEditingController _email = TextEditingController();
-  TextEditingController _password = TextEditingController();
-  TextEditingController _pwkedua = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+ final  TextEditingController _password = TextEditingController();
+ final  TextEditingController _pwkedua = TextEditingController();
 
   bool _isSecure = true;
   IconData _icon = CupertinoIcons.eye_fill;
