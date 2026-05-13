@@ -1,16 +1,16 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/register_siswa_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../home_page_siswa_anjani.dart';
 
-class LoginSiswa extends StatefulWidget {
-  const LoginSiswa({super.key});
+class LoginSiswaAnjani extends StatefulWidget {
+  const LoginSiswaAnjani({super.key});
 
   @override
-  State<LoginSiswa> createState() => _LoginSiswaState();
+  State<LoginSiswaAnjani> createState() => _LoginSiswaAnjaniState();
 }
 
-class _LoginSiswaState extends State<LoginSiswa> {
+class _LoginSiswaAnjaniState extends State<LoginSiswaAnjani> {
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
   bool _isSecure = true;
@@ -106,10 +106,10 @@ class _LoginSiswaState extends State<LoginSiswa> {
                   setState(() {
                     if (_username.text == "Anjani" &&
                         _password.text == "rahmaanjani") {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePageSiswa(),
+                          builder: (context) => DasbroadPage(),
                         ),
                       );
                     } else {

@@ -1,7 +1,6 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/login_pengajar_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
 import 'package:flutter/material.dart';
-//
 
 class SelectPageMaria extends StatefulWidget {
   const SelectPageMaria({super.key});
@@ -14,13 +13,14 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.purple],
+            colors: [Colors.purple.shade400, Colors.purple.shade100],
             begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            end: Alignment.center,
           ),
         ),
         child: Column(
@@ -36,22 +36,16 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
             ),
             SizedBox(height: 30),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   width: 150,
                   height: 180,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.blue, width: 2),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withValues(alpha: 0.5),
-                        blurRadius: 7,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
+                    borderRadius: BorderRadiusGeometry.circular(26),
+                    border: Border.all(color: Colors.blueAccent, width: 2),
+                    boxShadow: [BoxShadow(blurRadius: 7, offset: Offset(0, 3))],
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +55,7 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoginSiswa(),
+                              builder: (context) => LoginSiswaAnjani(),
                             ),
                           );
                         },
@@ -72,7 +66,7 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
                         ),
                       ),
                       Text(
-                        " SISWA",
+                        "SISWA",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -86,15 +80,9 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
                   height: 180,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.green, width: 2),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withValues(alpha: 0.5),
-                        blurRadius: 7,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
+                    borderRadius: BorderRadiusGeometry.circular(26),
+                    border: Border.all(color: Colors.blueAccent, width: 2),
+                    boxShadow: [BoxShadow(blurRadius: 7, offset: Offset(0, 3))],
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -108,11 +96,14 @@ class _SelectPageMariaState extends State<SelectPageMaria> {
                             ),
                           );
                         },
-                        icon: Icon(Icons.person, size: 50, color: Colors.blue),
+                        icon: Icon(
+                          Icons.person,
+                          size: 45,
+                          color: Colors.blueGrey,
+                        ),
                       ),
-                      SizedBox(height: 10),
                       Text(
-                        "GURU",
+                        "Pengajar",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

@@ -171,7 +171,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginSiswa()),
+                    MaterialPageRoute(builder: (context) => LoginSiswaAnjani()),
                   );
                 },
                 child: Row(
