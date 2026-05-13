@@ -218,8 +218,43 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   ),
                   Text("Bu rina", style: TextStyle(fontSize: 10)),
                 ],
-
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "14 : 55 - "
+                      "15 :00 ",
+                ),
+                SizedBox(height: 10, width: 10),
+                Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
+                SizedBox(height: 10, width: 10),
+                Text(
+                  "MATEMATIKA",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text("Bu rina", style: TextStyle(fontSize: 10)),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "14 : 55 - "
+                      "15 :00 ",
+                ),
+                SizedBox(height: 10, width: 10),
+                Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
+                SizedBox(height: 10, width: 10),
+                Text(
+                  "MATEMATIKA",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text("Bu rina", style: TextStyle(fontSize: 10)),
+              ],
             ),
           ],
         ),

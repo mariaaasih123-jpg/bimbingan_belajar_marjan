@@ -2,6 +2,7 @@ import 'package:bimbingan_belajar_marjan/model/dasbroad_model.dart';
 import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/pembayaran_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 class DasbroadPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _DasbroadPageState extends State<DasbroadPage> {
       label: "BERANDA",
       color: Colors.black,
     ),
-    1 : DasbroadModel(
+    1: DasbroadModel(
       page: JadwalPage(),
       icon: Icons.task_outlined,
       label: "JADWAL",
@@ -33,14 +34,38 @@ class _DasbroadPageState extends State<DasbroadPage> {
       color: Colors.black,
     ),
     0: DasbroadModel(
-      page: HomePageSiswa(),
-      icon: Icons.home,
-      label: "BERANDA",
+      page: SettingPage(),
+      icon: Icons.settings,
+      label: "PENGATURAN",
       color: Colors.black,
     ),
   };
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
+        elevation: 5,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+        items: pages.entries
+            .map(
+              (e) => BottomNavigationBarItem(
+                icon: Icon(e.value.icon, color: Colors.purple),
+                activeIcon: Icon(e.value.icon, color: e.value.color),
+                label: e.value.label,
+                backgroundColor: Colors.purpleAccent,
+              ),
+            )
+            .toList(),
+      ),
+      body: pages[selectedIndex]!.page,
+    );
   }
 }
