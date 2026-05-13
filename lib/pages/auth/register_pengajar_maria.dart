@@ -8,11 +8,12 @@ class RegisterPengajarMaria extends StatefulWidget {
   @override
   State<RegisterPengajarMaria> createState() => _RegisterPengajarMariaState();
 }
+
 //wekuu
 class _RegisterPengajarMariaState extends State<RegisterPengajarMaria> {
-  TextEditingController _email = TextEditingController();
-  TextEditingController _password = TextEditingController();
-  TextEditingController _pwkedua = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _pwkedua = TextEditingController();
 
   bool _isSecure = true;
   IconData _icon = CupertinoIcons.eye_fill;
@@ -39,7 +40,7 @@ class _RegisterPengajarMariaState extends State<RegisterPengajarMaria> {
             boxShadow: [
               BoxShadow(
                 offset: Offset(1.5, 1.5),
-                color: Colors.purple.withOpacity(0.4),
+                color: Colors.purple.withValues(alpha: 0.5),
                 blurRadius: 5,
                 spreadRadius: 5,
               ),
@@ -50,10 +51,7 @@ class _RegisterPengajarMariaState extends State<RegisterPengajarMaria> {
               SizedBox(height: 30),
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                    'assets/image/pengajar.webp'
-                    , height: 150
-                ),
+                child: Image.asset('assets/image/pengajar.webp', height: 150),
               ),
               SizedBox(height: 20),
               Text(

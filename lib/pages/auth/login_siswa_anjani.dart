@@ -15,7 +15,6 @@ class _LoginSiswaState extends State<LoginSiswa> {
   final TextEditingController _password = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
-  bool _norRobot = true;
 
   void isSecure() {
     setState(() {
@@ -31,7 +30,6 @@ class _LoginSiswaState extends State<LoginSiswa> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.purple.shade100,
       body: Container(
@@ -58,8 +56,11 @@ class _LoginSiswaState extends State<LoginSiswa> {
                   fontSize: 25,
                 ),
               ),
-              SizedBox(height:30),
-              Image.asset("assets/images/pnddkn.png",height: 100,width: 100,),
+              SizedBox(height: 30),
+              Image.asset(
+                  "assets/images/pnddkn.png",
+                  height: 100,
+                  width: 100),
               SizedBox(height: 30),
               TextField(
                 controller: _username,
@@ -91,20 +92,6 @@ class _LoginSiswaState extends State<LoginSiswa> {
                 ),
               ),
               SizedBox(height: 20),
-              Row(
-                children: [
-                  Checkbox(
-                    value: _norRobot,
-                    onChanged: (value) {
-                      setState(() {
-                        _norRobot = !_norRobot;
-                      });
-                    },
-                  ),
-                  Text("I'm not a robot", style: TextStyle(color: Colors.white)),
-                ],
-              ),
-              SizedBox(height: 20),
               ElevatedButton(
                 style: ButtonStyle(
                   shape: WidgetStatePropertyAll(
@@ -113,9 +100,7 @@ class _LoginSiswaState extends State<LoginSiswa> {
                     ),
                   ),
                   fixedSize: WidgetStatePropertyAll(Size(200, 1)),
-                  backgroundColor: WidgetStatePropertyAll(
-                    Colors.blueAccent,
-                  ),
+                  backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
                 ),
                 onPressed: () {
                   setState(() {
@@ -123,22 +108,20 @@ class _LoginSiswaState extends State<LoginSiswa> {
                         _password.text == "rahmaanjani") {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePageSiswa()),
+                        MaterialPageRoute(
+                          builder: (context) => HomePageSiswa(),
+                        ),
                       );
                     } else {
                       showDialog(
                         context: context,
                         builder: (context) =>
                             AlertDialog(title: Text("LOGIN GAGAL")),
-
                       );
                     }
                   });
                 },
-                child: Text(
-                  "LOGIN",
-                  style: TextStyle(color: Colors.white),
-                ),
+                child: Text("LOGIN", style: TextStyle(color: Colors.white)),
               ),
               SizedBox(height: 20),
               Wrap(
@@ -151,7 +134,9 @@ class _LoginSiswaState extends State<LoginSiswa> {
                   TextButton(
                     onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterSiswaAnjani()),
+                      MaterialPageRoute(
+                        builder: (context) => RegisterSiswaAnjani(),
+                      ),
                     ),
                     child: Text(
                       " Daftar",

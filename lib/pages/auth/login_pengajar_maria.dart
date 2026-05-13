@@ -10,12 +10,10 @@ class LoginPengajarMaria extends StatefulWidget {
 }
 
 class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
-  TextEditingController _username = TextEditingController();
-  TextEditingController _password = TextEditingController();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
-  bool _rememberMe = true;
-  final TextEditingController _confirmpassword = TextEditingController();
 
   void isSecure() {
     setState(() {
@@ -120,19 +118,6 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                   ),
                 ),
                 SizedBox(height: 20),
-                Row(
-                  children: [
-                    Checkbox(
-                      value: _rememberMe,
-                      onChanged: (value) {
-                        setState(() {
-                          _rememberMe = !_rememberMe;
-                        });
-                      },
-                    ),
-                    Text("Remember Me", style: TextStyle(color: Colors.white)),
-                  ],
-                ),
                 ElevatedButton(
                   style: ButtonStyle(
                     fixedSize: WidgetStatePropertyAll(Size(200, 1)),
@@ -140,8 +125,8 @@ class _LoginPengajarMariaState extends State<LoginPengajarMaria> {
                   ),
                   onPressed: () {
                     setState(() {
-                      if (_username.text == "Mariasih" &&
-                          _password.text == "88888") {
+                      if (_username.text == "hadiman" &&
+                          _password.text == "99999") {
                         showDialog(
                           context: context,
                           builder: (context) =>
