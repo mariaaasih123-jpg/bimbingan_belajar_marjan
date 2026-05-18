@@ -22,7 +22,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(//
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purpleAccent,
         title: Column(
