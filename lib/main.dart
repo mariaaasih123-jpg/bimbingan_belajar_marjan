@@ -1,5 +1,6 @@
-import 'package:bimbingan_belajar_marjan/pages/auth/splash_screen_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/teacher/timetable_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,6 +17,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: TimetablePage(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,home: DasbroadPage());
   }
 }

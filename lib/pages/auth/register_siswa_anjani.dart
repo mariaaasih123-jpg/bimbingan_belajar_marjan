@@ -1,3 +1,5 @@
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../home_page_siswa_anjani.dart';
@@ -11,10 +13,10 @@ class RegisterSiswaAnjani extends StatefulWidget {
 }
 
 class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
-  final TextEditingController _nama = TextEditingController();
-   final TextEditingController _password = TextEditingController();
-
+  final _nama = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   final TextEditingController _confirmpassword = TextEditingController();
+  final TextEditingController _select = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
 
@@ -57,7 +59,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.purple.withValues(alpha: 0.7),
+                  fillColor: Colors.pink.shade50.withValues(alpha: 0.7),
                   label: Text("NAMA"),
                   hintText: "Nama",
                   border: OutlineInputBorder(
@@ -72,7 +74,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                 obscureText: _isSecure,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.purple.withValues(alpha: 0.5),
+                  fillColor: Colors.pink.shade50.withValues(alpha: 0.5),
                   hintText: "Password",
                   labelText: "Password",
                   border: OutlineInputBorder(
@@ -97,6 +99,20 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                   suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
                 ),
               ),
+              SizedBox(height: 10),
+              TextField(
+                controller: _select,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.pink.shade50.withValues(alpha: 0.5),
+                  hintText: "(owner/guru/siswa)",
+                  labelText: "LOGIN SEBAGAI",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                ),
+              ),
               SizedBox(height: 20),
               ElevatedButton(
                 style: ButtonStyle(
@@ -112,10 +128,30 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                   setState(() {
                     if (_confirmpassword.text == _password.text &&
                         _password.text.isNotEmpty &&
-                        _nama.text.isNotEmpty) {
+                        _nama.text.isNotEmpty &&
+                        _select.text.isNotEmpty) {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePageSiswa()),
+                        MaterialPageRoute(
+                          builder: (context) => HomePageSiswa(),
+                        ),
+                      );
+                    } else if (_select.text == "owner") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DasbroadPage()),
+                      );
+                    } else if (_select.text == "siswa") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePageSiswa(),
+                        ),
+                      );
+                    } else if (_select.text == "pegawai") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => JadwalPage()),
                       );
                     } else {
                       showDialog(
@@ -136,10 +172,12 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                     "Sudah punya akun?",
                     style: TextStyle(color: Colors.white),
                   ),
-                  TextButton(//
+                  TextButton(
                     onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginSiswa()),
+                      MaterialPageRoute(
+                        builder: (context) => LoginSiswaAnjani(),
+                      ),
                     ),
                     child: Text(
                       " login",

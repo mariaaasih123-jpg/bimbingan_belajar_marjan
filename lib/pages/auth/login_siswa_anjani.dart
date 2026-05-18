@@ -1,18 +1,20 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/register_siswa_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../home_page_siswa_anjani.dart';
 
-class LoginSiswa extends StatefulWidget {
-  const LoginSiswa({super.key});
+class LoginSiswaAnjani extends StatefulWidget {
+  const LoginSiswaAnjani({super.key});
 
   @override
-  State<LoginSiswa> createState() => _LoginSiswaState();
+  State<LoginSiswaAnjani> createState() => _LoginSiswaAnjaniState();
 }
 
-class _LoginSiswaState extends State<LoginSiswa> {
+class _LoginSiswaAnjaniState extends State<LoginSiswaAnjani> {
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
+  final TextEditingController _select = TextEditingController();
   bool _isSecure = true;
   IconData _icon = Icons.remove_red_eye;
 
@@ -49,7 +51,7 @@ class _LoginSiswaState extends State<LoginSiswa> {
               ),
               SizedBox(height: 5),
               Text(
-                "Atur jadwal lesmu dengan mudah",
+                "SMARTLESS APP",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -57,10 +59,7 @@ class _LoginSiswaState extends State<LoginSiswa> {
                 ),
               ),
               SizedBox(height: 30),
-              Image.asset(
-                  "assets/images/pnddkn.png",
-                  height: 100,
-                  width: 100),
+              Image.asset("assets/images/pnddkn.png", height: 150, width: 200),
               SizedBox(height: 30),
               TextField(
                 controller: _username,
@@ -84,11 +83,25 @@ class _LoginSiswaState extends State<LoginSiswa> {
                   filled: true,
                   fillColor: Colors.pink.shade50.withValues(alpha: 0.5),
                   hintText: "Password",
-                  labelText: "rahmaanjani",
+                  labelText: "Masukan pasword",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(0),
                   ),
                   suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
+                ),
+              ),
+              SizedBox(height: 10),
+              TextField(
+                controller: _select,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.pink.shade50.withValues(alpha: 0.5),
+                  hintText: "(owner/guru/siswa)",
+                  labelText: "LOGIN SEBAGAI",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(0),
+                  ),
                 ),
               ),
               SizedBox(height: 20),
@@ -105,18 +118,38 @@ class _LoginSiswaState extends State<LoginSiswa> {
                 onPressed: () {
                   setState(() {
                     if (_username.text == "Anjani" &&
-                        _password.text == "rahmaanjani") {
+                        _password.text == "rahmaanjani" &&
+                        _select.text == "siswa") {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => DasbroadPage()),
+                      );
+                    } else if (_username.text == "mariasih" &&
+                        _password.text == "1234" &&
+                        _select.text == "owner") {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => HomePageSiswa(),
                         ),
                       );
-                    } else {
+                    }
+                    else if (_username.text == "bu dea" &&
+                        _password.text == "123456" &&
+                        _select.text == "pegawai") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePageSiswa(),
+                        ),
+                      );
+                    }
+                    else {
                       showDialog(
                         context: context,
                         builder: (context) =>
                             AlertDialog(title: Text("LOGIN GAGAL")),
+
                       );
                     }
                   });
