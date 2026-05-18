@@ -2,9 +2,12 @@ import 'package:bimbingan_belajar_marjan/pages/profile_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/select_page_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
+import 'package:bimbingan_belajar_marjan/services/menu_service.dart';
+import 'package:bimbingan_belajar_marjan/widget/jadwal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/menu_widget.dart';
 import 'auth/login_siswa_anjani.dart';
 import 'daftar_pengajar.dart';
 import 'jadwal_page.dart';
@@ -19,6 +22,7 @@ class HomePageSiswa extends StatefulWidget {
 class _HomePageSiswaState extends State<HomePageSiswa> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -193,69 +197,95 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 10),
+            JadwalWidget(
+              id: 0,
+              jam: "16 : 00 17 : 30",
+              pelajaran: "Matematika",
+              guru: "Bu Rina",
+              status: "online",
+              icon: Icons.calculate_outlined,
+            ),
+            JadwalWidget(
+              id: 1,
+              jam: "18 : 00 19 : 30",
+              pelajaran: "Bahasa Inggris",
+              guru: "Mr.Budi",
+              status: "offline",
+              icon: Icons.book,
+            ),
+            JadwalWidget(
+              id: 2,
+              jam: "19 : 45 21 : 15",
+              pelajaran: "Fisika",
+              guru: "Pak Andi",
+              status: "online",
+              icon: Icons.science_rounded,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "MENU",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                ),
+              ],
+            ),
+            SizedBox(height: 5),
             Container(
-              margin: EdgeInsets.only(top: 10, left: 15, right: 15),
-              height: 75,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.purple.shade100,
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Colors.grey),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "14 : 55 - "
-                    "15 :00 ",
-                  ),
-                  SizedBox(height: 10, width: 10),
-                  Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
-                  SizedBox(height: 10, width: 10),
-                  Text(
-                    "MATEMATIKA",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Text("Bu rina", style: TextStyle(fontSize: 10)),
-                ],
+              width: size.width,
+              height: 100,
+              margin: const EdgeInsets.all(20),
+              child: GridView.builder(
+                itemCount: mn.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: size.width,
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 2,
+                ),
+                itemBuilder: (context, i) => MenuWidget(
+                  icon: mn[i].icon,
+                  title: mn[i].title,
+                  color: mn[i].color,
+                  page: mn[i].page,
+                ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "14 : 55 - "
-                      "15 :00 ",
+            SizedBox(height: 5),
+            Container(
+              width: 475,
+              height: 200,
+              padding: EdgeInsets.all(20),
+              child: Container(
+                width: size.width,
+                height: size.height,
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.purple.shade100.withValues(alpha: 0.5),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(1.5, 1.5),
+                      color: Colors.white.withValues(alpha: 20),
+                      blurRadius: 5,
+                      spreadRadius: 5,
+                    ),
+                  ],
                 ),
-                SizedBox(height: 10, width: 10),
-                Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
-                SizedBox(height: 10, width: 10),
-                Text(
-                  "MATEMATIKA",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "PERINGATAN",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 3),
+                    Text("Les matematika dimulai pukul"),
+                  ],
                 ),
-                Text("Bu rina", style: TextStyle(fontSize: 10)),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "14 : 55 - "
-                      "15 :00 ",
-                ),
-                SizedBox(height: 10, width: 10),
-                Icon(Icons.calculate_rounded, color: Colors.purple, size: 60),
-                SizedBox(height: 10, width: 10),
-                Text(
-                  "MATEMATIKA",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text("Bu rina", style: TextStyle(fontSize: 10)),
-              ],
+              ),
             ),
           ],
         ),
