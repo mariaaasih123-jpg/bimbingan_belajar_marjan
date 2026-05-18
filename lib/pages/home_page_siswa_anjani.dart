@@ -1,11 +1,13 @@
 import 'package:bimbingan_belajar_marjan/pages/profile_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/select_page_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
+import 'package:bimbingan_belajar_marjan/services/menu_service.dart';
+import 'package:bimbingan_belajar_marjan/widget/jadwal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../model/jadwal_model.dart';
-import '../services/jadwal_service.dart';
+import '../widget/menu_widget.dart';
 import 'auth/login_siswa_anjani.dart';
 import 'daftar_pengajar.dart';
 import 'jadwal_page.dart';
@@ -18,11 +20,11 @@ class HomePageSiswa extends StatefulWidget {
 }
 
 class _HomePageSiswaState extends State<HomePageSiswa> {
-  List<JadwalModel> jadwal = JadwalService().jadwal();
-
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.purpleAccent,
         title: Column(
@@ -67,7 +69,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.home_outlined, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Home", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Home",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -83,7 +88,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.calendar_month, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Jadwal", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Jadwal",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -99,7 +107,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.people_alt, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Daftar Pengajar", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Daftar Pengajar",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -115,7 +126,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(CupertinoIcons.plus, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Tambah Jadwal", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Tambah Jadwal",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -131,7 +145,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.person, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Profile", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Profile",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -147,7 +164,10 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   children: [
                     Icon(Icons.settings, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Pengaturan", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Pengaturan",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
@@ -156,81 +176,119 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginSiswaAnjani()),
-                  );//
+                    MaterialPageRoute(builder: (context) => SelectPageMaria()),
+                  );
                 },
-                child:
-                Row(
+                child: Row(
                   children: [
                     Icon(Icons.logout, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
-                    Text("Log out", style: TextStyle(fontSize: 22)),
+                    Text(
+                      "Log out",
+                      style: TextStyle(fontSize: 22, color: Colors.black),
+                    ),
                   ],
                 ),
               ),
-
             ],
           ),
         ),
       ),
-      body: ListView.builder(
-        itemCount: jadwal.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              margin: EdgeInsets.only(top: 20, left: 15, right: 15),
-              padding: EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                color: Colors.purple.shade100,
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Colors.grey),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    jadwal[index].jam,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                  SizedBox(width: 12),
-                  Icon(jadwal[index].icon, size: 30, color: Colors.purple),
-                  SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        jadwal[index].pelajaran,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 3),
-                      Text(
-                        jadwal[index].guru,
-                        style: TextStyle(fontSize: 13, color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 12),
-                  Container(//
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.purple),
-                      color: Colors.purple.shade50,
-                    ),
-                    child: Text(
-                      jadwal[index].status,
-                      style: TextStyle(fontSize: 12),
-                    ),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 10),
+            JadwalWidget(
+              id: 0,
+              jam: "16 : 00 17 : 30",
+              pelajaran: "Matematika",
+              guru: "Bu Rina",
+              status: "online",
+              icon: Icons.calculate_outlined,
+            ),
+            JadwalWidget(
+              id: 1,
+              jam: "18 : 00 19 : 30",
+              pelajaran: "Bahasa Inggris",
+              guru: "Mr.Budi",
+              status: "offline",
+              icon: Icons.book,
+            ),
+            JadwalWidget(
+              id: 2,
+              jam: "19 : 45 21 : 15",
+              pelajaran: "Fisika",
+              guru: "Pak Andi",
+              status: "online",
+              icon: Icons.science_rounded,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "MENU",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                ),
+              ],
+            ),
+            SizedBox(height: 5),
+            Container(
+              width: size.width,
+              height: 100,
+              margin: const EdgeInsets.all(20),
+              child: GridView.builder(
+                itemCount: mn.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: size.width,
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 2,
+                ),
+                itemBuilder: (context, i) => MenuWidget(
+                  icon: mn[i].icon,
+                  title: mn[i].title,
+                  color: mn[i].color,
+                  page: mn[i].page,
+                ),
               ),
             ),
-          );
-        },
+            SizedBox(height: 5),
+            Container(
+              width: 475,
+              height: 200,
+              padding: EdgeInsets.all(20),
+              child: Container(
+                width: size.width,
+                height: size.height,
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.purple.shade100.withValues(alpha: 0.5),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(1.5, 1.5),
+                      color: Colors.white.withValues(alpha: 20),
+                      blurRadius: 5,
+                      spreadRadius: 5,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "PERINGATAN",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 3),
+                    Text("Les matematika dimulai pukul"),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
