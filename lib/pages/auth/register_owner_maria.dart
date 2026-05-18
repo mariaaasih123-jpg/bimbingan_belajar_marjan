@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 import 'login_owner_maria.dart';
 
 class RegisterOwnerMaria extends StatefulWidget {
@@ -13,8 +12,8 @@ class RegisterOwnerMaria extends StatefulWidget {
 
 class _RegisterOwnerMariaState extends State<RegisterOwnerMaria> {
   final TextEditingController _email = TextEditingController();
- final  TextEditingController _password = TextEditingController();
- final  TextEditingController _pwkedua = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _pwkedua = TextEditingController();
 
   bool _isSecure = true;
   IconData _icon = CupertinoIcons.eye_fill;
@@ -52,10 +51,7 @@ class _RegisterOwnerMariaState extends State<RegisterOwnerMaria> {
               SizedBox(height: 30),
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                    'assets/image/pengajar.webp'
-                    , height: 150
-                ),
+                child: Image.asset('assets/image/pengajar.webp', height: 150),
               ),
               SizedBox(height: 20),
               Text(
@@ -114,7 +110,7 @@ class _RegisterOwnerMariaState extends State<RegisterOwnerMaria> {
                   filled: true,
                   fillColor: Colors.white.withValues(alpha: 0.5),
                   hintText: "Konfirmasi Password",
-                  labelText: "Konfir password kamu",
+                  labelText: "Confirm password kamu",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),

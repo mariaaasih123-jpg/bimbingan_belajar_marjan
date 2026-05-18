@@ -1,4 +1,5 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/splash_screen_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/timetable_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,6 +16,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: SplashScreen(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,home: TimetablePage(),);
   }
 }
