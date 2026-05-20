@@ -2,14 +2,14 @@ import 'package:bimbingan_belajar_marjan/pages/profile_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/select_page_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
-import 'package:bimbingan_belajar_marjan/services/menu_service.dart';
+import 'package:bimbingan_belajar_marjan/services/menu_service_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/jadwal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/menu_widget.dart';
 import 'auth/login_siswa_anjani.dart';
-import 'daftar_pengajar.dart';
+import 'daftar_pengajar_anjani.dart';
 import 'jadwal_page.dart';
 
 class HomePageSiswa extends StatefulWidget {
@@ -274,7 +274,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   ],
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -283,6 +283,21 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                     ),
                     SizedBox(height: 3),
                     Text("Les matematika dimulai pukul"),
+                    SizedBox(height: 8),
+                    Text(
+                      "02  :  18  :  30",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                      ),
+                    ),
+                    SizedBox(height: 2),
+                    Text(
+                      "JAM      MENIT      DETIK",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                    SizedBox(width: 10),
+                    Icon(Icons.timer,size: 20,color: Colors.black,)
                   ],
                 ),
               ),

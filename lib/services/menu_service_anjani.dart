@@ -1,4 +1,4 @@
-import 'package:bimbingan_belajar_marjan/pages/daftar_pengajar.dart';
+import 'package:bimbingan_belajar_marjan/pages/daftar_pengajar_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:flutter/material.dart';
