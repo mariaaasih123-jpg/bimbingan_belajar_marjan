@@ -1,6 +1,6 @@
 import 'dart:async';
+import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
 import 'package:flutter/material.dart';
-import '../select_page_maria.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(seconds: 5),
           (timer) => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => SelectPageMaria()),
+        MaterialPageRoute(builder: (context) => LoginSiswaAnjani()),
       ),
     );
     super.initState();
