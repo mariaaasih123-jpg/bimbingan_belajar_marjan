@@ -13,7 +13,7 @@ List<MenuModel> mn = [
     title: "Jadwal",
     color: Colors.black,
     page: TambahJadwal(),
-  ),
+  ),//
   MenuModel(
     icon: Icons.people,
     title: "Pengajar",
