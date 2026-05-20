@@ -1,5 +1,4 @@
 
-
 class AbsensiModelMaria{
   final String name;
   final String image;

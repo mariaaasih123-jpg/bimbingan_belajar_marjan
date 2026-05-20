@@ -37,7 +37,7 @@ class _LoginSiswaAnjaniState extends State<LoginSiswaAnjani> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.all(20),
+        padding:  EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
             children: [
