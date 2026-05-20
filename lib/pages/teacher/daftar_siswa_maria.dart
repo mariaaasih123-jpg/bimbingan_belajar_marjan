@@ -48,6 +48,7 @@ class DaftarSiswaMaria extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 25),
+
                   ],
                 ),
               ),

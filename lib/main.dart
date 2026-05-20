@@ -18,6 +18,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: AbsensiSiswaMaria());
+    return MaterialApp(debugShowCheckedModeBanner: false,home: DaftarSiswaMaria());
   }
 }
