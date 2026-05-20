@@ -1,12 +1,10 @@
-import 'dart:ui';
-
 class DaftarSiswaModelMaria {
   final String name;
-  final String clas;
-  final String package;
+  final String kelas;
+  final String paket;
+  final String image;
   final String status;
-  final String gmbr;
 
-  DaftarSiswaModelMaria(
-      {required this.name, required this.clas, required this.package, required this.status, required this.gmbr});
+  DaftarSiswaModelMaria({required this.name, required this.kelas, required this.paket, required this.image, required this.status});
+
 }
