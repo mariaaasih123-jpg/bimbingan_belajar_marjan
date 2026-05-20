@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TimetablePage extends StatelessWidget {
-  const TimetablePage({super.key});
+class TimetablePageMaria extends StatelessWidget {
+  const TimetablePageMaria({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,11 @@ class TimetablePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.arrow_back_outlined, color: Colors.black),
+                  Icon(
+                    Icons.arrow_back_outlined,
+                    color: Colors.black,
+                    size: 15,
+                  ),
                   Text(
                     "Jadwal Mengajar",
                     style: TextStyle(
@@ -24,7 +28,7 @@ class TimetablePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Icon(Icons.calendar_month, color: Colors.black),
+                  Icon(Icons.calendar_month, color: Colors.black, size: 20),
                 ],
               ),
               SizedBox(height: 20),
