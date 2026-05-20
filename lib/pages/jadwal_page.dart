@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 
-class JadwalPage extends StatefulWidget {
-  const JadwalPage({super.key});
+class JadwalPageSiswa extends StatefulWidget {
+  const JadwalPageSiswa({super.key});
 
   @override
-  State<JadwalPage> createState() => _JadwalPageState();
+  State<JadwalPageSiswa> createState() => _JadwalPageSiswaState();
 }
 
-class _JadwalPageState extends State<JadwalPage> {
+class _JadwalPageSiswaState extends State<JadwalPageSiswa> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("JADWAL",),
+      ),
+    );
   }
 }

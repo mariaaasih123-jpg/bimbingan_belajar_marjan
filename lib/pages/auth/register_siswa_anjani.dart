@@ -151,7 +151,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                     } else if (_select.text == "pegawai") {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => JadwalPage()),
+                        MaterialPageRoute(builder: (context) => JadwalPageSiswa()),
                       );
                     } else {
                       showDialog(
