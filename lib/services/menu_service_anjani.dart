@@ -1,5 +1,6 @@
 import 'package:bimbingan_belajar_marjan/pages/daftar_pengajar_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/profile_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/material.dart';
@@ -24,5 +25,11 @@ List<MenuModel> mn = [
     title: "Pengaturan",
     color: Colors.black,
     page: SettingPage(),
+  ),
+  MenuModel(
+    icon: Icons.person,
+    title: "Profile",
+    color: Colors.black,
+    page: ProfilePage(),
   ),
 ];

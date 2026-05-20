@@ -166,7 +166,6 @@ class _ProfilePageState extends State<ProfilePage> {
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Checkbox(
                         value: _lakilaki,
