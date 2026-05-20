@@ -1,6 +1,7 @@
 import 'package:bimbingan_belajar_marjan/pages/daftar_pengajar_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/material.dart';
 
 import '../model/menu_model.dart';
@@ -10,7 +11,7 @@ List<MenuModel> mn = [
     icon: Icons.calendar_month,
     title: "Jadwal",
     color: Colors.black,
-    page: JadwalPage(),
+    page: TambahJadwal(),
   ),
   MenuModel(
     icon: Icons.people,

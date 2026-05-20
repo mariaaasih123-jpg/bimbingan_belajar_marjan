@@ -1,15 +1,15 @@
-import 'package:bimbingan_belajar_marjan/pages/profile_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/profile_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/timetable_page_maria.dart';
 import 'package:bimbingan_belajar_marjan/services/menu_service_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/jadwal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../widget/menu_widget.dart';
 import 'auth/login_siswa_anjani.dart';
 import 'daftar_pengajar_anjani.dart';
-import 'jadwal_page.dart';
 
 class HomePageSiswa extends StatefulWidget {
   const HomePageSiswa({super.key});
@@ -61,7 +61,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePageSiswa()),
+                    MaterialPageRoute(builder: (context) => DasbroadPage()),
                   );
                 },
                 child: Row(
@@ -80,7 +80,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => JadwalPage()),
+                    MaterialPageRoute(builder: (context) => TimetablePageMaria()),
                   );
                 },
                 child: Row(
@@ -234,8 +234,8 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
             SizedBox(height: 5),
             Container(
               width: size.width,
-              height: 100,
-              margin: const EdgeInsets.all(20),
+              height: 115,
+              margin: EdgeInsets.all(20),
               child: GridView.builder(
                 itemCount: mn.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

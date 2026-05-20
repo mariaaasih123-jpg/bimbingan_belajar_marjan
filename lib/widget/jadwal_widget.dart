@@ -36,7 +36,6 @@ class _JadwalWidgetState extends State<JadwalWidget> {
         children: [
           Row(
             children: [
-              // JAM
               Text(
                 widget.jam,
                 style: TextStyle(fontWeight: FontWeight.bold),
