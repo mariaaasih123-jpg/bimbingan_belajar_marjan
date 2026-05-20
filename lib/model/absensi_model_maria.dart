@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 
 class AbsensiModelMaria{
-  final IconData icon;
-  final Color colors;
   final String name;
+  final String image;
   final String status;
 
-  AbsensiModelMaria({required this.icon, required this.colors, required this.name, required this.status});
+  AbsensiModelMaria({required this.name, required this.image, required this.status});
 
 }
