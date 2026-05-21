@@ -193,3 +193,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
     );
   }
 }
+
+// enum user {
+//   siswa, guru, admin
+// }

@@ -1,8 +1,6 @@
 
-import 'package:bimbingan_belajar_marjan/pages/owner/daftar_pengajar_maria.dart';
-import 'package:bimbingan_belajar_marjan/pages/teacher/absensi_siswa_maria.dart';
-import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
-import 'package:bimbingan_belajar_marjan/pages/teacher/pengajar_page_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/splash_screen_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/detail_siswa_maria.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,6 +17,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: DaftarPengajarMaria());
+    return MaterialApp(debugShowCheckedModeBanner: false,home:DetailSiswaMaria());
   }
 }

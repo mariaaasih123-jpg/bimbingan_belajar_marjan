@@ -1,9 +1,8 @@
 import 'package:bimbingan_belajar_marjan/model/dasbroad_model.dart';
 import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
-import 'package:bimbingan_belajar_marjan/pages/laporan_pembayaran_maria_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/owner/laporan_pembayaran_maria_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
-import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/material.dart';
 
 class DasbroadPage extends StatefulWidget {
