@@ -1,9 +1,17 @@
 class PembayaranModelMaria {
-  final int totalSiswa;
-  final int totalPengajar;
-  final int totalJadwal;
-  final int totalTransaksi;
-  final String totalPendapatan;
+  final String paket;
+  final String totalTagihan;
+  final String status;
+  final String bank;
+  final String rekening;
+  final String nama;
 
-  PembayaranModelMaria({required this.totalSiswa, required this.totalPengajar, required this.totalJadwal, required this.totalTransaksi, required this.totalPendapatan});
+  PembayaranModelMaria({
+    required this.paket,
+    required this.totalTagihan,
+    required this.status,
+    required this.bank,
+    required this.rekening,
+    required this.nama,
+  });
 }

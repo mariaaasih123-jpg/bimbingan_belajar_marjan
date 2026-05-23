@@ -1,6 +1,6 @@
 
-import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/owner/detail_owner_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/owner/pembayaran_page_maria.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,6 +17,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home:DetailOwnerMaria());
+    return MaterialApp(debugShowCheckedModeBanner: false,home:PembayaranPageMaria());
   }
 }
