@@ -1,67 +1,114 @@
+import 'package:bimbingan_belajar_marjan/services/absensi_service_maria.dart';
 import 'package:flutter/material.dart';
 
 class AbsensiSiswaMaria extends StatelessWidget {
   const AbsensiSiswaMaria({super.key});
 
+  Color warnaStatus(String status) {
+    if (status == "Hadir") {
+      return Colors.blue;
+    }
+
+    if (status == "Izin") {
+      return Colors.yellowAccent;
+    }
+
+    return Colors.red;
+  }
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      backgroundColor: Colors.purple,
-      body: Center(
-        child: Column(
+      backgroundColor: Colors.white,
+
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        elevation: 0,
+
+        leading: Icon(Icons.arrow_back, color: Colors.black, size: 35),
+
+        title: Text(
+          "Absensi siswa",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        centerTitle: true,
+      ),
+
+      body: SingleChildScrollView(
+       child: Padding(padding: EdgeInsets.all(20),
+       child: Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.arrow_back,
-                    size: 35,
-                    color: Colors.black,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "Absensi siswa",
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+            Text(
+              "Kelas : Matematika",
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(20),
+
+            SizedBox(height: 5),
+
+            Text("Senin, 3 Mei 2023", style: TextStyle(fontSize: 18)),
+
+            SizedBox(height: 30),
+
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: absen.length,
+
+              itemBuilder: (context, index) => Container(
+                padding: EdgeInsets.all(15),
+
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius:  BorderRadius.circular(20),
+                  border: Border.all(color: Colors.grey),
+
+                  borderRadius: BorderRadius.circular(20),
                 ),
-                child: Column(
-                  crossAxisAlignment:
-                  CrossAxisAlignment.start,
+
+                child: Row(
                   children: [
+                    CircleAvatar(radius: 25, backgroundImage: AssetImage(absen[index].image),),
+
+                    SizedBox(width: 20),
+
                     Text(
-                      "Kelas : Matematika",
+                      absen[index].name,
                       style: TextStyle(
-                        fontSize: 26,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
-                      "Senin, 3 Mei 2023",
-                      style: TextStyle(
-                        fontSize: 18,
+                    SizedBox(width: 90),
+                    Container(
+                      margin: EdgeInsets.only(left: 20),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
+
+                      decoration: BoxDecoration(
+                        color: warnaStatus(absen[index].status),
+
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        absen[index].status,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 25),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
-    ],
-        ),
       ),
     );
   }

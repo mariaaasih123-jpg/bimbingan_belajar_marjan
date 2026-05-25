@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MetodePembayaranMaria extends StatelessWidget {
@@ -9,7 +8,7 @@ class MetodePembayaranMaria extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300),
+        border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
@@ -21,15 +20,11 @@ class MetodePembayaranMaria extends StatelessWidget {
               color: Colors.black,
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(
-              Icons.mail,
-              color: Colors.white,
-              size: 40,
-            ),
+            child: Icon(Icons.mail, color: Colors.white, size: 40),
           ),
 
           SizedBox(width: 16),
- Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -43,21 +38,11 @@ class MetodePembayaranMaria extends StatelessWidget {
 
               SizedBox(height: 8),
 
-              Text(
-                "BCA - 1234567890",
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
+              Text("BCA - 1234567890", style: TextStyle(fontSize: 18)),
 
               SizedBox(height: 4),
 
-              Text(
-                "an. Smartless Les",
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
+              Text("an. Smartless Les", style: TextStyle(fontSize: 18)),
             ],
           ),
         ],
