@@ -28,7 +28,7 @@ class DetailSiswaMaria extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 45,
-                    backgroundImage: AssetImage('assets/image/logo.jpeg'),
+                    backgroundImage: AssetImage('assets/images/logo.jpeg'),
                   ),
                   SizedBox(width: 20),
                   Column(

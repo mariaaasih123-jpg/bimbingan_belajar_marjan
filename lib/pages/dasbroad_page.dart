@@ -1,8 +1,8 @@
 import 'package:bimbingan_belajar_marjan/model/dasbroad_model.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/owner/laporan_pembayaran_maria_page.dart';
-import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 class DasbroadPage extends StatefulWidget {
@@ -34,7 +34,7 @@ class _DasbroadPageState extends State<DasbroadPage> {
       color: Colors.black,
     ),
     3: DasbroadModel(
-      page: SettingPage(),
+      page: PengaturanMaria(),
       icon: Icons.settings,
       label: "PENGATURAN",
       color: Colors.black,

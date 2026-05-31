@@ -1,6 +1,6 @@
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/student/daftar_pengajar_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/student/profile_siswa_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ List<MenuModel> mn = [
     icon: Icons.settings,
     title: "Pengaturan",
     color: Colors.black,
-    page: SettingPage(),
+    page: PengaturanMaria(),
   ),
   MenuModel(
     icon: Icons.person,

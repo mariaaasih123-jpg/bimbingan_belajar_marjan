@@ -6,26 +6,28 @@ class DaftarSiswaMaria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  Icon(Icons.arrow_back, size: 28),
-                  SizedBox(width: 10),
-                  Text(
-                    "Daftar siswa",
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ),
-            Container(
+      backgroundColor: Colors.white,
+
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        elevation: 0,
+
+        leading: Icon(Icons.arrow_back, color: Colors.black, size: 35),
+
+        title: Text(
+          "Daftar siswa",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        centerTitle: true,
+      ),
+            body: Container(
               width: double.infinity,
-              height: 700,
+              height: double.infinity,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -53,9 +55,7 @@ class DaftarSiswaMaria extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
+
     );
   }
 }

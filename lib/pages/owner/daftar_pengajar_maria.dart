@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class DaftarPengajarMaria extends StatelessWidget {
@@ -7,14 +7,25 @@ class DaftarPengajarMaria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: CupertinoColors.systemPurple,
-          title: Text(
-            'Daftar Pengajar',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+      backgroundColor: Colors.white,
+
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        elevation: 0,
+
+        leading: Icon(Icons.arrow_back, color: Colors.black, size: 40),
+
+        title: Text(
+          "Daftar pengajar",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
           ),
         ),
+
+        centerTitle: true,
+      ),
       body: Center(
         child: Container(
           width: double.infinity,

@@ -49,7 +49,7 @@ class DetailOwnerMaria extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 100,
-                    backgroundImage: AssetImage('assets/image/logo.jpeg'),
+                    backgroundImage: AssetImage('assets/images/logo.jpeg'),
                   ),
                   SizedBox(width: 30),
                   Column(

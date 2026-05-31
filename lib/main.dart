@@ -1,5 +1,7 @@
 
 import 'package:bimbingan_belajar_marjan/pages/owner/daftar_pengajar_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/detail_siswa_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/pengajar_page_maria.dart';
 import 'package:flutter/material.dart';
 
 

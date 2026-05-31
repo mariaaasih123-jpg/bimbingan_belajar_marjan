@@ -1,7 +1,7 @@
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/student/profile_siswa_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/setting_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:bimbingan_belajar_marjan/services/menu_service_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/jadwal_widget_anjani.dart';
@@ -156,7 +156,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SettingPage()),
+                    MaterialPageRoute(builder: (context) => PengaturanMaria()),
                   );
                 },
                 child: Row(

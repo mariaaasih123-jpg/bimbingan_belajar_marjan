@@ -34,7 +34,7 @@ class PengaturanMaria extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 55,
-              backgroundImage: AssetImage('assets/image/logo.jpeg'),
+              backgroundImage: AssetImage('assets/images/logo.jpeg'),
             ),
             SizedBox(height: 15),
             Text(
