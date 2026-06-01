@@ -1,5 +1,5 @@
 
-import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,6 +16,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: DaftarSiswaMaria(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,home: LoginSiswaAnjani(),);
   }
 }
