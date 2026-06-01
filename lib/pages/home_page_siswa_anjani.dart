@@ -1,15 +1,18 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
-import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
-import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/jadwal_page_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/student/profile_siswa_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
+import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal_anjani.dart';
 import 'package:bimbingan_belajar_marjan/services/menu_service_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/jadwal_widget_anjani.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../widget/menu_widget.dart';
+import '../widget/menu_widget_anjani.dart';
 import 'auth/login_siswa_anjani.dart';
-import 'student/daftar_pengajar_anjani.dart';
+import 'owner/daftar_pengajar_anjani.dart';
+import 'owner/home_page_owner_anjani.dart';
+
 
 class HomePageSiswa extends StatefulWidget {
   const HomePageSiswa({super.key});

@@ -1,12 +1,13 @@
+import 'package:bimbingan_belajar_marjan/model/jadwal_mengajar_model_anjani.dart';
 import 'package:flutter/material.dart';
 
-import '../model/jadwal_model.dart';
+import '../model/jadwal_model_anjani.dart';
 
 class JadwalService {
-  List<JadwalModel> jadwal() {
+  List<JadwalMengajarModel> jadwal() {
     return [
-      JadwalModel(
-        id: 0,
+      JadwalMengajarModel(
+          id: 0,
           jam: "16 : 00 17 : 30",
           pelajaran: "Matematika",
           guru: "Bu Rina",
@@ -14,7 +15,7 @@ class JadwalService {
           icon: Icons.calculate_outlined
       ),
 
-      JadwalModel(
+      JadwalMengajarModel(
         id: 1,
         jam: "18 : 00 19 : 30",
         pelajaran: "Bahasa Inggris",
@@ -23,7 +24,7 @@ class JadwalService {
         icon: Icons.book,
       ),
 
-      JadwalModel(
+      JadwalMengajarModel(
         id: 2,
         jam: "19 : 45 21 : 15",
         pelajaran: "Fisika",

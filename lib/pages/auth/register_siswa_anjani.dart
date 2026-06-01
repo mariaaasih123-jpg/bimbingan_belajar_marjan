@@ -1,5 +1,5 @@
-import 'package:bimbingan_belajar_marjan/pages/dasbroad_page.dart';
-import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/dasbroad_page_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/jadwal_page_anjani.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../home_page_siswa_anjani.dart';

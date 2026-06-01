@@ -13,16 +13,10 @@ class PembayaranPageMaria extends StatelessWidget {
         backgroundColor: Colors.purple,
         elevation: 0,
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
-        ),
+        leading: Icon(Icons.arrow_back, color: Colors.black),
         title: Text(
           "Pembayaran",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
       body: Padding(
@@ -31,23 +25,17 @@ class PembayaranPageMaria extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InfoPembayaranMaria(),
- SizedBox(height: 30),
- MetodePembayaranMaria(),
+            SizedBox(height: 30),
+            MetodePembayaranMaria(),
             SizedBox(
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple,
-                ),
-                onPressed: () {
-                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                onPressed: () {},
                 child: Text(
                   "Bayar Sekarang",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ),
