@@ -1,7 +1,6 @@
 import 'package:bimbingan_belajar_marjan/model/jadwal_mengajar_model_anjani.dart';
 import 'package:flutter/material.dart';
 
-import '../model/jadwal_model_anjani.dart';
 
 class JadwalService {
   List<JadwalMengajarModel> jadwal() {

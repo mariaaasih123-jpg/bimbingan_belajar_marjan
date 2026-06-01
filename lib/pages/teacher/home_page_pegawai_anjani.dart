@@ -7,8 +7,6 @@ import 'package:flutter/material.dart';
 import '../auth/login_siswa_anjani.dart';
 import '../auth/pengaturan_maria.dart';
 import '../dasbroad_page_anjani.dart';
-import '../jadwal_page_anjani.dart';
-import '../owner/daftar_pengajar_anjani.dart';
 import '../student/profile_siswa_anjani.dart';
 import '../tambah_jadwal_anjani.dart';
 

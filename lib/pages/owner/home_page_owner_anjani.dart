@@ -3,8 +3,9 @@ import 'package:bimbingan_belajar_marjan/widget/menu_owner_widget_anjani.dart';
 import 'package:flutter/material.dart';
 
 import '../auth/pengaturan_maria.dart';
-import '../student/daftar_pengajar_anjani.dart';
+
 import '../teacher/daftar_siswa_maria.dart';
+import 'daftar_pengajar_anjani.dart';
 import 'laporan_pembayaran_anjani_page.dart';
 
 class HomePageOwnerAnjani extends StatefulWidget {
