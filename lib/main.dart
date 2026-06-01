@@ -1,6 +1,8 @@
 
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/jadwal_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/student/detail_pengajar_page_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,6 +19,6 @@ class MyApk extends StatefulWidget {
 class _MyApkState extends State<MyApk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: JadwalPageSiswa(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,home: DaftarSiswaMaria(),);
   }
 }
