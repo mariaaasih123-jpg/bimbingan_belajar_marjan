@@ -4,7 +4,7 @@ import 'package:bimbingan_belajar_marjan/pages/student/profile_siswa_anjani.dart
 import 'package:bimbingan_belajar_marjan/pages/tambah_jadwal.dart';
 import 'package:flutter/material.dart';
 
-import '../model/menu_model.dart';
+import '../model/menu_model_anjani.dart';
 
 List<MenuModel> mn = [
   MenuModel(
