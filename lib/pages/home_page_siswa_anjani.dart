@@ -11,7 +11,6 @@ import '../widget/menu_widget_anjani.dart';
 import 'auth/login_siswa_anjani.dart';
 import 'owner/daftar_pengajar_anjani.dart';
 
-
 class HomePageSiswa extends StatefulWidget {
   const HomePageSiswa({super.key});
 
@@ -296,8 +295,6 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                       "JAM      MENIT      DETIK",
                       style: TextStyle(fontSize: 15),
                     ),
-                    SizedBox(width: 10),
-                    Icon(Icons.timer,size: 20,color: Colors.black,)
                   ],
                 ),
               ),
