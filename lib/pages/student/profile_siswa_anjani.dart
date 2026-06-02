@@ -145,7 +145,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   SizedBox(height: 10),
                 ],
-              ),
+              ),//
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
