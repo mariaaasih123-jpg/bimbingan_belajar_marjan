@@ -1,7 +1,7 @@
 import 'package:bimbingan_belajar_marjan/pages/auth/register_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/dasbroad_page_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/owner/home_page_owner_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/dasbroad_page_pegawai.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -141,7 +141,7 @@ class _LoginSiswaAnjaniState extends State<LoginSiswaAnjani> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePageSiswa(),
+                          builder: (context) => DasbroadPegawaiPage(),
                         ),
                       );
                     }

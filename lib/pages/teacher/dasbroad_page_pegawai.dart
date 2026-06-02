@@ -1,36 +1,38 @@
 import 'package:bimbingan_belajar_marjan/model/dasbroad_model_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
-import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/jadwal_page_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/owner/pembayaran_page_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/home_page_pegawai_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/jadwal_mengajar_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/profil_pengajar_maria.dart';
+
 import 'package:flutter/material.dart';
 
-class DasbroadPage extends StatefulWidget {
-  const DasbroadPage({super.key});
+import '../auth/pengaturan_maria.dart';
+
+class DasbroadPegawaiPage extends StatefulWidget {
+  const DasbroadPegawaiPage({super.key});
 
   @override
-  State<DasbroadPage> createState() => _DasbroadPageState();
+  State<DasbroadPegawaiPage> createState() => _DasbroadPegawaiPageState();
 }
 
-class _DasbroadPageState extends State<DasbroadPage> {
+class _DasbroadPegawaiPageState extends State<DasbroadPegawaiPage> {
   int selectedIndex = 0;
   Map<int, DasbroadPegawaiModel> pages = {
     0: DasbroadPegawaiModel(
-      page: HomePageSiswa(),
+      page: HomePagePegawai(),
       icon: Icons.home,
       label: "BERANDA",
       color: Colors.black,
     ),
     1: DasbroadPegawaiModel(
-      page: JadwalPageSiswa(),
+      page: JadwalMengajarPage(),
       icon: Icons.task_outlined,
       label: "JADWAL",
       color: Colors.black,
     ),
     2: DasbroadPegawaiModel(
-      page: PembayaranPageMaria(),
-      icon: Icons.monetization_on,
-      label: "PEMBAYARAN",
+      page: ProfilPengajarMaria(),
+      icon: Icons.person,
+      label: "Profile",
       color: Colors.black,
     ),
     3: DasbroadPegawaiModel(
@@ -57,12 +59,12 @@ class _DasbroadPageState extends State<DasbroadPage> {
         items: pages.entries
             .map(
               (e) => BottomNavigationBarItem(
-                icon: Icon(e.value.icon, color: Colors.purple),
-                activeIcon: Icon(e.value.icon, color: e.value.color),
-                label: e.value.label,
-                backgroundColor: Colors.purpleAccent,
-              ),
-            )
+            icon: Icon(e.value.icon, color: Colors.purple),
+            activeIcon: Icon(e.value.icon, color: e.value.color),
+            label: e.value.label,
+            backgroundColor: Colors.purpleAccent,
+          ),
+        )
             .toList(),
       ),
       body: pages[selectedIndex]!.page,

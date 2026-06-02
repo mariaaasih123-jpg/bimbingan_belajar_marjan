@@ -19,10 +19,7 @@ class DaftarSiswaMaria extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     'Daftar Siswa',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -42,15 +39,10 @@ class DaftarSiswaMaria extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 15,
-                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
-                      borderRadius:
-                      BorderRadius.circular(18),
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(18),
                     ),
                     child: TextField(
                       decoration: InputDecoration(
@@ -60,7 +52,7 @@ class DaftarSiswaMaria extends StatelessWidget {
                       ),
                     ),
                   ),
- SizedBox(height: 25),
+                  SizedBox(height: 25),
 
                   SizedBox(
                     height: 550,
@@ -68,15 +60,14 @@ class DaftarSiswaMaria extends StatelessWidget {
                       itemCount: kiw.length,
                       itemBuilder: (context, i) => DaftarSiswaWidgetMaria(
                         image: kiw[i].image,
-name: kiw[i].name,
+                        name: kiw[i].name,
                         kelas: kiw[i].kelas,
                         paket: kiw[i].paket,
                         status: kiw[i].status,
-
+                      ),
                     ),
                   ),
-                  ),
-        ],
+                ],
               ),
             ),
           ],

@@ -1,14 +1,16 @@
 import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/jadwal_mengajar_page.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/profil_pengajar_maria.dart';
+import 'package:bimbingan_belajar_marjan/services/menu_pegawai_services_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/jadwal_mengajar_widget_anjani.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:bimbingan_belajar_marjan/widget/menu_pegawai_widget_anjani.dart';
 import 'package:flutter/material.dart';
 
 import '../auth/login_siswa_anjani.dart';
 import '../auth/pengaturan_maria.dart';
 import '../dasbroad_page_anjani.dart';
-import '../student/profile_siswa_anjani.dart';
-import '../tambah_jadwal_anjani.dart';
+
+
 
 class HomePagePegawai extends StatefulWidget {
   const HomePagePegawai({super.key});
@@ -20,6 +22,7 @@ class HomePagePegawai extends StatefulWidget {
 class _HomePagePegawaiState extends State<HomePagePegawai> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Column(
@@ -43,8 +46,8 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
             gradient: LinearGradient(
               colors: [
                 Colors.white,
-                Colors.purple.shade50,
-                Colors.purple.shade400,
+                Colors.purpleAccent.shade100,
+                Colors.purpleAccent.shade400,
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomRight,
@@ -117,26 +120,7 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TambahJadwal()),
-                  );
-                },
-                child: Row(
-                  children: [
-                    Icon(CupertinoIcons.plus, size: 22, color: Colors.purple),
-                    SizedBox(width: 10),
-                    Text(
-                      "Tambah Jadwal",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 20),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    MaterialPageRoute(builder: (context) => ProfilPengajarMaria()),
                   );
                 },
                 child: Row(
@@ -199,10 +183,10 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
             children: [
               Row(
                 children: [
-                  SizedBox(width: 25),
+                  SizedBox(width: 15),
                   Container(
-                    width: 150,
-                    height: 170,
+                    width: 200,
+                    height: 150,
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.purple.shade100,
@@ -234,10 +218,10 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 100),
+                  SizedBox(width: 50),
                   Container(
-                    width: 150,
-                    height: 170,
+                    width: 200,
+                    height: 150,
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.purple.shade100,
@@ -321,8 +305,28 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Menu", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text("MENU", style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
+              ),
+              SizedBox(height: 5),
+              Container(
+                width: size.width,
+                height: 115,
+                margin: EdgeInsets.all(20),
+                child: GridView.builder(
+                  itemCount: menuy.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisSpacing: size.width,
+                    crossAxisCount: 4,
+                    crossAxisSpacing: 2,
+                  ),
+                  itemBuilder: (context, i) => MenuPegawaiWidget(
+                    icon: menuy[i].icon,
+                    title: menuy[i].title,
+                    color: menuy[i].color,
+                    page: menuy[i].page,
+                  ),
+                ),
               ),
             ],
           ),
