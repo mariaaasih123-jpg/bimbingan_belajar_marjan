@@ -1,9 +1,8 @@
 
+import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/owner/detail_owner_maria.dart';
 import 'package:bimbingan_belajar_marjan/widget/menu_owner_widget_anjani.dart';
 import 'package:flutter/material.dart';
-
-import '../auth/pengaturan_maria.dart';
-
 import '../teacher/daftar_siswa_maria.dart';
 import 'daftar_pengajar_anjani.dart';
 import 'laporan_pembayaran_anjani_page.dart';
@@ -206,14 +205,51 @@ class _HomePageOwnerAnjaniState extends State<HomePageOwnerAnjani> {
                     page: DaftarPengajar(),
                   ),
                   MenuOwnerWidget(
-                    icon: Icons.settings,
-                    title: "Pengaturan",
-                    page: PengaturanMaria(),
+                    icon: Icons.person,
+                    title: "Profile",
+                    page: DetailOwnerMaria(),
                   ),
                   MenuOwnerWidget(
                     icon: Icons.assignment,
                     title: "Laporan",
                     page: LaporanPembayaranAnjaniPage(),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 10),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      alignment: Alignment.centerLeft,
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      backgroundColor: WidgetStatePropertyAll(Colors.purple.shade400),
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginSiswaAnjani(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(Icons.logout, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text(
+                          "Log out",
+                          style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

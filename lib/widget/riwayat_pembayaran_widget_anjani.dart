@@ -69,7 +69,7 @@ class _RiwayatPembayaranWidgetAnjaniState
                   vertical: 5,
                 ),
                 decoration: BoxDecoration(
-                  color: widget.status == "Aktif"
+                  color: widget.status == "LUNAS"
                       ? Colors.green.shade100
                       : Colors.red.shade100,
                   borderRadius: BorderRadius.circular(8),
@@ -77,7 +77,7 @@ class _RiwayatPembayaranWidgetAnjaniState
                 child: Text(
                   widget.status,
                   style: TextStyle(
-                    color: widget.status == "Aktif"
+                    color: widget.status == "lUNAS"
                         ? Colors.green
                         : Colors.red,
                     fontWeight: FontWeight.bold,

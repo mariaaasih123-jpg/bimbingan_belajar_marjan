@@ -1,8 +1,8 @@
 import 'package:bimbingan_belajar_marjan/pages/dasbroad_page_anjani.dart';
-import 'package:bimbingan_belajar_marjan/pages/jadwal_page_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/owner/home_page_owner_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/teacher/dasbroad_page_pegawai.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../home_page_siswa_anjani.dart';
 import 'login_siswa_anjani.dart';
 
 class RegisterSiswaAnjani extends StatefulWidget {
@@ -125,42 +125,42 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                   backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
                 ),
                 onPressed: () {
-                  setState(() {
-                    if (_confirmpassword.text == _password.text &&
-                        _password.text.isNotEmpty &&
-                        _nama.text.isNotEmpty &&
-                        _select.text.isNotEmpty) {
-                      Navigator.push(
+                  if (_confirmpassword.text == _password.text &&
+                      _password.text.isNotEmpty &&
+                      _nama.text.isNotEmpty &&
+                      _select.text.isNotEmpty) {
+
+                    if (_select.text == "owner") {
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePageSiswa(),
+                          builder: (context) => HomePageOwnerAnjani(),
                         ),
                       );
-                    } else if (_select.text == "owner") {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DasbroadPage()),
-                      );
                     } else if (_select.text == "siswa") {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePageSiswa(),
+                          builder: (context) => DasbroadPage(),
                         ),
                       );
                     } else if (_select.text == "pegawai") {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => JadwalPageSiswa()),
-                      );
-                    } else {
-                      showDialog(
-                        context: context,
-                        builder: (context) =>
-                            AlertDialog(title: Text("DAFTAR GAGAL")),
+                        MaterialPageRoute(
+                          builder: (context) => DasbroadPegawaiPage(),
+                        ),
                       );
                     }
-                  });
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) => const AlertDialog(
+                        title: Text("DAFTAR GAGAL"),
+                        content: Text("Data belum lengkap atau password tidak sama"),
+                      ),
+                    );
+                  }
                 },
                 child: Text("DAFTAR", style: TextStyle(color: Colors.white)),
               ),

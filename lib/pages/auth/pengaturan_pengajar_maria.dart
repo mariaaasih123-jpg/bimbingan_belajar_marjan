@@ -1,10 +1,9 @@
-import 'package:bimbingan_belajar_marjan/pages/auth/login_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/home_page_siswa_anjani.dart';
 import 'package:bimbingan_belajar_marjan/widget/pengaturan_widget_maria.dart';
 import 'package:flutter/material.dart';
 
-class PengaturanMaria extends StatelessWidget {
-  const PengaturanMaria({super.key});
+class PengaturanPengajarMaria extends StatelessWidget {
+  const PengaturanPengajarMaria({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +34,11 @@ class PengaturanMaria extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 55,
-              backgroundImage: AssetImage('assets/image/cew.png'),
+              backgroundImage: AssetImage('assets/image/mar.png'),
             ),
             SizedBox(height: 15),
             Text(
-              "Mariasih",
+              "BU dea",
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 25),
@@ -76,26 +75,26 @@ class PengaturanMaria extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginSiswaAnjani(),
+                      builder: (context) => HomePageSiswa(),
                     ),
                   );
                 },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.logout, color: Colors.white),
-                  SizedBox(width: 10),
-                  Text(
-                    "Keluar",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.logout, color: Colors.white),
+                    SizedBox(width: 10),
+                    Text(
+                      "Keluar",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
             ),
           ],
         ),

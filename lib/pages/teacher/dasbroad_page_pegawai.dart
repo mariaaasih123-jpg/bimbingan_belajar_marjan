@@ -1,4 +1,5 @@
 import 'package:bimbingan_belajar_marjan/model/dasbroad_model_anjani.dart';
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_pengajar_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/home_page_pegawai_anjani.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/jadwal_mengajar_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/profil_pengajar_maria.dart';
@@ -36,7 +37,7 @@ class _DasbroadPegawaiPageState extends State<DasbroadPegawaiPage> {
       color: Colors.black,
     ),
     3: DasbroadPegawaiModel(
-      page: PengaturanMaria(),
+      page: PengaturanPengajarMaria(),
       icon: Icons.settings,
       label: "PENGATURAN",
       color: Colors.black,

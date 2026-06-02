@@ -7,14 +7,14 @@ class RiwayatPembayarServiceAnjani {
       nama: "MARIASIH",
       paket: "Reguler",
       harga: "1.000.000",
-      status: "Aktif",
+      status: "LUNAS",
       gmbr: "assets/images/murid.png",
     ),
     RiwayatPembayaranModel(
       nama: "Anjani",
       paket: "Reguler",
       harga: "1.000.000",
-      status: "TidakAktif",
+      status: "TIDAK LUNAS",
       gmbr: "assets/images/murid.png",
     ),
   ];

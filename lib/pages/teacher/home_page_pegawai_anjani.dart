@@ -1,3 +1,4 @@
+import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_pengajar_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/jadwal_mengajar_page.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/profil_pengajar_maria.dart';
@@ -139,7 +140,7 @@ class _HomePagePegawaiState extends State<HomePagePegawai> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PengaturanMaria()),
+                    MaterialPageRoute(builder: (context) => PengaturanPengajarMaria()),
                   );
                 },
                 child: Row(

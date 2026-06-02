@@ -15,12 +15,5 @@ List<DaftarSiswaModelMaria> kiw = [
     image: 'assets/pet.webp',
     status: 'ofline',
   ),
-  DaftarSiswaModelMaria(
-    name: 'Rizky aldy',
-    kelas: 'x rpl 2',
-    paket: 'reguler',
-    image: 'assets/',
-    status: 'online',
-  ),
 
 ];

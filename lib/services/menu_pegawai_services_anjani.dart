@@ -1,4 +1,4 @@
-import 'package:bimbingan_belajar_marjan/pages/auth/pengaturan_maria.dart';
+import 'package:bimbingan_belajar_marjan/pages/student/detail_pengajar_page_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/absensi_siswa_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/daftar_siswa_maria.dart';
 import 'package:bimbingan_belajar_marjan/pages/teacher/jadwal_mengajar_page.dart';
@@ -26,9 +26,9 @@ List<MenuModelPegawai> menuy = [
     page: AbsensiSiswaMaria(),
   ),
   MenuModelPegawai(
-    icon: Icons.settings,
-    title: "Pengaturan",
+    icon: Icons.person,
+    title: "Profile",
     color: Colors.purpleAccent,
-    page: PengaturanMaria(),
+    page: DetailPengajarMaria()
   ),
 ];
